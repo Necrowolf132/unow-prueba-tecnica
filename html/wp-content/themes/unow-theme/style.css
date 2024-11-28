@@ -1,0 +1,17 @@
+/*
+Theme Name: Unow Theme
+Theme URI: https://www.unow.es/
+Author: Necrowolf
+Author URI: https://jeelidev.online/
+Description: Unow theme compatible con Elementor
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Elementor, minimal
+Text Domain: unow-theme
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
