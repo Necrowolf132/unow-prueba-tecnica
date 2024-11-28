@@ -1,4 +1,5 @@
 .env
 db/*
+node_modules/
 Estructura-pagina.readme
 lista-para-video.txt

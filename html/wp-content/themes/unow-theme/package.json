@@ -1,0 +1,30 @@
+{
+  "name": "unow-theme",
+  "version": "1.0.0",
+  "description": "theme compatible con elementor",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production npm run transpile",
+    "transpile": "npx postcss assets/css/main.css -o tailwind-build.css",
+    "watch": "npx postcss assets/css/main.css -o tailwind-build.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Necrowolf132/unow-prueba-tecnica.git"
+  },
+  "author": "necrowolf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Necrowolf132/unow-prueba-tecnica/issues"
+  },
+  "homepage": "https://github.com/Necrowolf132/unow-prueba-tecnica#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.15"
+  }
+}
