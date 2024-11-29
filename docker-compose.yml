@@ -12,6 +12,9 @@ services:
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_P: sgkxOSxSKVXFDcbpMOYvamAFtPCSESsg
       WORDPRESS_DB_NAME: unow
+      WORDPRESS_DEBUG: true
+      WORDPRESS_DEBUG_LOG: true
+      WORDPRESS_DEBUG_DISPLAY: true
     volumes:
       - ./html:/var/www/html
       - ./certs/unow-prueba-tecnica.jeelidev.online.pem:/etc/ssl/certs/unow-prueba-tecnica.jeelidev.online.pem

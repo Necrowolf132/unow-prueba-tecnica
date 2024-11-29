@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        customTextHoverColor: "#475467",
+      },
       fontFamily: {
         primary: ["Inter", "sans-serif"], // Inter será la fuente principal para "sans".
       },

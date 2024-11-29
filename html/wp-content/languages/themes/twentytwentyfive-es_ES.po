@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Five package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-11-27 20:06:25+0000\n"
+"PO-Revision-Date: 2024-11-28 07:29:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,6 +23,12 @@ msgstr "Twenty Twenty-Five hace hincapié en la sencillez y la adaptabilidad. Of
 #, gp-priority: high
 msgid "Twenty Twenty-Five"
 msgstr "Twenty Twenty-Five"
+
+#: patterns/text-faqs.php:35 patterns/text-faqs.php:51
+#: patterns/text-faqs.php:71 patterns/text-faqs.php:87
+msgctxt "Answer in the FAQs pattern."
+msgid "This exquisite compilation showcases a diverse array of photographs that capture the essence of different eras and cultures, reflecting the unique styles and perspectives of each artist."
+msgstr "Esta exquisita recopilación muestra un conjunto diverso de fotografías que captan la esencia de distintas épocas y culturas, reflejando los estilos y perspectivas únicos de cada artista."
 
 #: theme.json
 msgctxt "Custom template name"
@@ -455,6 +461,11 @@ msgstr "¿De qué trata El libro de las historias?"
 msgctxt "Heading of the FAQs pattern."
 msgid "Frequently Asked Questions"
 msgstr "Preguntas más frecuentes"
+
+#: patterns/text-faqs.php
+msgctxt "Pattern description"
+msgid "A FAQs section with a FAQ heading and list of questions and answers."
+msgstr "Una sección de FAQs con un encabezado de Preguntas Frecuentes y una lista de preguntas y respuestas."
 
 #: patterns/text-faqs.php
 msgctxt "Pattern title"
@@ -2401,6 +2412,10 @@ msgstr "Nombre del formato de publicación"
 #: functions.php:114
 msgid "A collection of post format patterns."
 msgstr "Una colección de patrones de formato de publicación."
+
+#: functions.php:113
+msgid "Post formats"
+msgstr "Formatos de entrada"
 
 #: functions.php:106
 msgid "A collection of full page layouts."

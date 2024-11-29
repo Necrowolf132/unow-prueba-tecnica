@@ -8,7 +8,7 @@ if (! class_exists('Tailwind_Nav_Walker')) {
             $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
             $class_names = $class_names ? ' ' . esc_attr($class_names) : '';
 
-            $output .= '<li><a href="' . esc_url($item->url) . '" class=" text-center md:text-start hover:text-blue-400' . $class_names . ' block md:inline-block">';
+            $output .= '<li><a href="' . esc_url($item->url) . '" class="font-semibold text-[16px] text-center md:text-start hover:text-customTextHoverColor' . $class_names . ' block md:inline-block">';
             $output .= esc_html($item->title);
             $output .= '</a></li>';
         }

@@ -1,0 +1,18 @@
+[29-Nov-2024 19:54:03 UTC] PHP Warning:  require_once(): https:// wrapper is disabled in the server configuration by allow_url_include=0 in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php on line 20
+[29-Nov-2024 19:54:03 UTC] PHP Warning:  require_once(https://unow-prueba-tecnica.jeelidev.online/wp-content/plugins/unow-contact-form/includes/class-unow-contact-form-admin.php): Failed to open stream: no suitable wrapper could be found in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php on line 20
+[29-Nov-2024 19:54:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'https://unow-prueba-tecnica.jeelidev.online/wp-content/plugins/unow-contact-form/includes/class-unow-contact-form-admin.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php:20
+Stack trace:
+#0 /var/www/html/wp-admin/includes/plugin.php(2387): include_once()
+#1 /var/www/html/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('unow-contact-fo...')
+#2 /var/www/html/wp-admin/plugins.php(60): activate_plugin('unow-contact-fo...', 'https://unow-pr...', false)
+#3 {main}
+  thrown in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php on line 20
+[29-Nov-2024 19:54:07 UTC] PHP Warning:  require_once(): https:// wrapper is disabled in the server configuration by allow_url_include=0 in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php on line 20
+[29-Nov-2024 19:54:07 UTC] PHP Warning:  require_once(https://unow-prueba-tecnica.jeelidev.online/wp-content/plugins/unow-contact-form/includes/class-unow-contact-form-admin.php): Failed to open stream: no suitable wrapper could be found in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php on line 20
+[29-Nov-2024 19:54:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'https://unow-prueba-tecnica.jeelidev.online/wp-content/plugins/unow-contact-form/includes/class-unow-contact-form-admin.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php:20
+Stack trace:
+#0 /var/www/html/wp-admin/includes/plugin.php(2387): include_once()
+#1 /var/www/html/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('unow-contact-fo...')
+#2 /var/www/html/wp-admin/plugins.php(60): activate_plugin('unow-contact-fo...', 'https://unow-pr...', false)
+#3 {main}
+  thrown in /var/www/html/wp-content/plugins/unow-contact-form/unow-contact-form.php on line 20

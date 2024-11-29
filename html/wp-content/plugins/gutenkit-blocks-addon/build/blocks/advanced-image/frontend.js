@@ -1,1 +1,0 @@
-window.addEventListener("load",(()=>{document.querySelectorAll(".wp-block-gutenkit-advanced-image").forEach((a=>{Fancybox.bind(a,"[data-fancybox]",{})}))}));

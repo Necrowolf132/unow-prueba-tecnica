@@ -9,6 +9,11 @@ if (
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
+  document.addEventListener("click", (event) => {
+    if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
 }
 document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("main-header")) {
