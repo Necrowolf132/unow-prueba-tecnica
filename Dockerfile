@@ -1,3 +1,5 @@
+FROM php:8.3-apache
+
 # Establece el directorio de trabajo
 WORKDIR /var/www/html
 
@@ -45,10 +47,8 @@ ENV WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME}
 # Establecer las configuraciones de PHP para producción
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-# OJOS MUY IMPORTANTE, CAMBIAR AL USUARIO WWW-DATA AQUI CAUSARA EL SCRIPT QUE HABILITA AL SSH, NO FUNCIONE, SIN EMBARGO AL MENOS PODER ESCRIBIR EN EL SISTEMA DE ARCHIVOS
-# CORREGUIR LUEGO
+
 USER www-data
 
 # Exponer los puertos
 EXPOSE 80 443 2222
-ENTRYPOINT ["/usr/local/bin/set_ssh.sh"]
