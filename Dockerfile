@@ -13,12 +13,6 @@ RUN a2enmod rewrite ssl socache_shmcb headers remoteip
 RUN echo 'RemoteIPHeader X-Forwarded-For' >> /etc/apache2/apache2.conf && \
     echo 'SetEnvIf X-Forwarded-Proto "https" HTTPS=on' >> /etc/apache2/apache2.conf
 
-    # Instalar OpenSSH Server
-RUN apt-get update && apt-get install -y openssh-server
-
-COPY set_ssh.sh /usr/local/bin/set_ssh.sh
-RUN chmod +x /usr/local/bin/set_ssh.sh
-
 # Copiar los archivos al contenedor
 USER www-data
 COPY html/ /var/www/html/
@@ -51,4 +45,4 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 USER www-data
 
 # Exponer los puertos
-EXPOSE 80 443 2222
+EXPOSE 80 443
