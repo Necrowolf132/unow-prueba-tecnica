@@ -1,18 +1,18 @@
-<footer class="bg-gray-900 text-white py-8">
-    <div class="container mx-auto px-4">
+<footer class="py-8 text-white bg-gray-900">
+    <div class="container px-4 mx-auto">
 
-        <div class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
+        <div class="flex flex-col items-center justify-between space-y-6 md:flex-row md:items-start md:space-y-0">
 
             <div class="flex items-center space-x-4">
                 <?php
                 $logo = get_theme_mod('custom_logo');
                 if ($logo) {
-                    echo '<a href="/"><img src="' . wp_get_attachment_url($logo) . '" alt="' . get_bloginfo('name') . '" class="h-12 w-auto"></a>';
+                    echo '<a href="/"><img src="' . wp_get_attachment_url($logo) . '" alt="' . get_bloginfo('name') . '" class="w-auto h-12"></a>';
                 } else {
-                    echo '<a href="/"><img src="' . get_template_directory_uri() . '/assets/images/Logomark.png" alt="Default Logo" class="h-12 w-auto"></a>';
+                    echo '<a href="/"><img src="' . get_template_directory_uri() . '/assets/images/Logomark.png" alt="Default Logo" class="w-auto h-12"></a>';
                 }
                 ?>
-                <span class="font-semibold text-lg hidden md:block">
+                <span class="hidden text-lg font-semibold md:block">
                     <?php echo esc_html(get_bloginfo('name') ?? 'Untitled UI'); ?>
                 </span>
             </div>
@@ -38,14 +38,15 @@
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-8"></div>
+        <div class="mt-8 border-t border-gray-700"></div>
 
 
-        <div class="text-center mt-4">
+        <div class="mt-4 text-center">
             <p class="text-xs">&copy; <?php echo date('Y'); ?> Elementor Unow Theme. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
+</div>
 <?php wp_footer(); ?>
 </body>
 

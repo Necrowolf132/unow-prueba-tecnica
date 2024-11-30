@@ -1,0 +1,21 @@
+{
+  "name": "necrowolf/unow-contact-form",
+  "description": "plugin wordpress de test tecnico para Unow",
+  "type": "project",
+  "require": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "license": "GPL-3.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "Necrowolf\\UnowContactForm\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "necrowolf132",
+      "email": "manjou132@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}

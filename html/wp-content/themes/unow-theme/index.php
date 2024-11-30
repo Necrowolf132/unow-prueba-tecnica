@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main">
+<main id="main" class="flex-1 bg-gray-100">
     <?php
     if (have_posts()) :
         while (have_posts()) : the_post();
