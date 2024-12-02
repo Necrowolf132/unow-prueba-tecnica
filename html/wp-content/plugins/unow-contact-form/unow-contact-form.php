@@ -14,7 +14,8 @@ if (! defined('ABSPATH')) {
 
 // Definir constantes del plugin para path y url
 define('UNOW_CONTACT_FORM_PATH', plugin_dir_path(__FILE__));
-define('UNOW_CONTACT_FORM_URL', plugin_dir_url(__FILE__));
+define('UNOW_CONTACT_FORM_URL', plugins_url('\/unow-contact-form\/'));
+
 
 require_once UNOW_CONTACT_FORM_PATH . 'includes/class-unow-contact-form-handler.php';
 require_once UNOW_CONTACT_FORM_PATH . 'includes/class-unow-contact-form-admin.php';

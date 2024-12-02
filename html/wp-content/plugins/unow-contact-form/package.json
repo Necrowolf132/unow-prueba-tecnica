@@ -1,0 +1,35 @@
+{
+  "name": "unow-contact-form",
+  "version": "1.0.0",
+  "description": "Plugins de registro de contactos con pruebas unitarias realizado para Unow",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production npm run transpile",
+    "transpile": "npx postcss assets/styles.css -o assets/unow-contact-form.css",
+    "watch": "npx postcss assets/styles.css -o assets/unow-contact-form.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Necrowolf132/unow-prueba-tecnica.git"
+  },
+  "author": "necrowolf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Necrowolf132/unow-prueba-tecnica/issues"
+  },
+  "homepage": "https://github.com/Necrowolf132/unow-prueba-tecnica#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.49.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "playwright": "^1.49.0"
+  }
+}

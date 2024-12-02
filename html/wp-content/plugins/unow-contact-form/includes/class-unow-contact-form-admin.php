@@ -11,7 +11,7 @@ if (! class_exists('Unow_contact_Form_Admin')) {
         public function add_admin_page()
         {
             add_menu_page(
-                'Unow Contactos reguistrados',
+                'Unow Contactos registrados',
                 'Unow Contactos',
                 'manage_options',
                 'unow-contact-form-entries',
@@ -28,8 +28,8 @@ if (! class_exists('Unow_contact_Form_Admin')) {
             $entries = $wpdb->get_results("SELECT * FROM $table");
 
             echo '<div class="wrap">';
-            echo '<h1>Contactos reguistrados</h1>';
-            echo '<table class="widefat fixed">';
+            echo '<h1>Contactos registrados</h1>';
+            echo '<table class="fixed widefat">';
             echo '<thead><tr><th>Nombre</th><th>Email</th><th>Mensaje</th><th>Fecha</th></tr></thead>';
             echo '<tbody>';
 

@@ -19,6 +19,7 @@ services:
       - ./html:/var/www/html
       - ./certs/unow-prueba-tecnica.develop.jeelidev.online.pem:/etc/ssl/certs/unow-prueba-tecnica.develop.jeelidev.online.pem
       - ./certs/unow-prueba-tecnica.develop.jeelidev.online-key.pem:/etc/ssl/private/unow-prueba-tecnica.develop.jeelidev.online-key.pem
+      - /tmp:/tmp
 
   db:
     container_name: myqldb

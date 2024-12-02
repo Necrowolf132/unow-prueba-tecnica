@@ -13,7 +13,7 @@ if (! class_exists('Unow_contact_Form_Handler')) {
 
         public function enqueue_styles()
         {
-            wp_enqueue_style('unow-contact-form-styles', UNOW_CONTACT_FORM_URL . 'assets/styles.css');
+            wp_enqueue_style('unow-contact-form-styles', UNOW_CONTACT_FORM_URL . 'assets/unow-contact-form.css');
         }
 
         public function render_form()
@@ -25,7 +25,13 @@ if (! class_exists('Unow_contact_Form_Handler')) {
 
         public function handle_form_submission()
         {
+            $this->handler_save_form();
+            exit;
+        }
+        public function handler_save_form()
+        {
             if (! isset($_POST['contact_form_nonce']) || ! wp_verify_nonce($_POST['contact_form_nonce'], 'submit_contact_form')) {
+                //echo "llegue";
                 wp_die('Verificación fallida.');
             }
 
@@ -41,9 +47,7 @@ if (! class_exists('Unow_contact_Form_Handler')) {
                 ['name' => $name, 'email' => $email, 'message' => $message, 'created_at' => current_time('mysql')],
                 ['%s', '%s', '%s', '%s']
             );
-
-            wp_redirect(home_url('/thank-you/'));
-            exit;
+            wp_redirect(home_url('?unow-success=true#unow-form'));
         }
     }
 }

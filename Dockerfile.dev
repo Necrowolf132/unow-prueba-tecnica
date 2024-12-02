@@ -1,9 +1,15 @@
 FROM php:8.3-apache
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli && docker-php-ext-install pdo_mysql
+RUN apt-get update 
+RUN apt-get upgrade -y
+RUN apt-get install subversion -y
+RUN apt-get install git curl unzip mariadb-client libpng-dev libjpeg-dev libfreetype6-dev -y
+RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli && docker-php-ext-install pdo_mysql && docker-php-ext-install gd && docker-php-ext-configure gd --with-freetype --with-jpeg
 RUN a2enmod rewrite && a2enmod ssl && a2enmod socache_shmcb
 RUN sed -i '/SSLCertificateFile.*snakeoil\.pem/c\SSLCertificateFile \/etc\/ssl\/certs\/unow-prueba-tecnica.develop.jeelidev.online.pem' /etc/apache2/sites-available/default-ssl.conf && sed -i '/SSLCertificateKeyFile.*snakeoil\.key/cSSLCertificateKeyFile /etc/ssl/private/unow-prueba-tecnica.develop.jeelidev.online-key.pem\' /etc/apache2/sites-available/default-ssl.conf
 RUN a2ensite default-ssl
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get clean && rm -rf /var/lib/apt/lists/
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 COPY ./custom-php.ini "$PHP_INI_DIR/conf.d/"
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data

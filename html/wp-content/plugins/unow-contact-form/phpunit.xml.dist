@@ -1,7 +1,14 @@
-<phpunit bootstrap="tests/bootstrap.php">
+<?xml version="1.0"?>
+<phpunit bootstrap="tests/bootstrap.php"
+backupGlobals="false"
+colors="true"
+convertErrorsToExceptions="true"
+convertNoticesToExceptions="true"
+convertWarningsToExceptions="true"
+>
     <testsuites>
         <testsuite name="unow contact form">
-            <directory>./tests</directory>
+            <directory prefix="Test_" suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
 </phpunit>
